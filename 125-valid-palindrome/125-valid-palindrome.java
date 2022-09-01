@@ -1,18 +1,24 @@
 class Solution {
     public boolean isPalindrome(String s) {
-        String parsedString = "";
-        s = s.toLowerCase();
-        for (int i = 0; i < s.length(); i++) {
-            int asciiVal = (int)s.charAt(i);
-            if ((asciiVal >= 48 && asciiVal <= 57) || (asciiVal >= 97 && asciiVal <= 122) ) {
-                parsedString += s.charAt(i);
-            }
-        }
-        int length = parsedString.length();
-        int floor = (int)Math.floor(length/2);
-        for (int i = 0; i < floor; i++) {
-            if (parsedString.charAt(i) != parsedString.charAt(length-1-i) ) {
-                return false;
+        int headPtr = 0;
+        int tailPtr = s.length()-1;
+        while (headPtr != tailPtr) {
+            int headPtrVal = (int)(Character.toLowerCase(s.charAt(headPtr)));
+            int tailPtrVal = (int)(Character.toLowerCase(s.charAt(tailPtr)));
+            if (!((headPtrVal >= 48 && headPtrVal <= 57) || (headPtrVal >= 97 && headPtrVal <= 122))) {
+                headPtr++;
+            } else if (!((tailPtrVal >= 48 && tailPtrVal <= 57) || (tailPtrVal >= 97 && tailPtrVal <= 122))){
+                tailPtr--;
+            } else if (((headPtrVal >= 48 && headPtrVal <= 57) || (headPtrVal >= 97 && headPtrVal <= 122)) && ((tailPtrVal >= 48 && tailPtrVal <= 57) || (tailPtrVal >= 97 && tailPtrVal <= 122)) ) {
+                if (headPtrVal != tailPtrVal) {
+                    return false;
+                } else {
+                    headPtr++;
+                    if (tailPtr-headPtr < 2) {
+                        return true;
+                    }
+                    tailPtr--;
+                }
             }
         }
         return true;
