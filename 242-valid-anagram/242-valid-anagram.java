@@ -12,23 +12,16 @@ class Solution {
         }
         for (int i = 0; i < t.length(); i++) {
             char item = t.charAt(i);
-            if (tKeys.get(item) == null) {
-                tKeys.put(item,1);
+            if (sKeys.get(item) == null) {
+                return false;
+            } else if (sKeys.get(item) == 1) {
+                sKeys.remove(item);
             } else {
-                tKeys.put(item,tKeys.get(item)+1) ;
+                sKeys.put(item,sKeys.get(item)-1) ;
             }
         }
-        if (sKeys.size() != tKeys.size()) {
+        if (sKeys.size() > 0) {
             return false;
-        } else {
-            for (Map.Entry<Character,Integer> entry : sKeys.entrySet() ) {
-                if (tKeys.get(entry.getKey()) == null) {
-                    return false;
-                }
-                if (!tKeys.get(entry.getKey()).equals(entry.getValue())) {
-                    return false;
-                }
-            }
         }
         return true;
     }
