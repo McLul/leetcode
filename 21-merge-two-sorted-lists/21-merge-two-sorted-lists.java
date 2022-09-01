@@ -27,9 +27,7 @@ class Solution {
         } else if (list2 != null) {
             result = list2;
             list2 = list2.next;
-        } else {
-            return null;
-        }
+        } 
         resultHead = result;
         while (list1 != null || list2 != null) {
             if (list1 != null && list2 != null) {
