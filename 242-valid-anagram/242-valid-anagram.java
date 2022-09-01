@@ -1,7 +1,6 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
         HashMap<Character,Integer> sKeys = new <Character,Integer>HashMap();
-        HashMap<Character,Integer> tKeys = new <Character,Integer>HashMap();
         for (int i = 0; i < s.length(); i++) {
             char item = s.charAt(i);
             if (sKeys.get(item) == null) {
