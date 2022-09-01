@@ -13,10 +13,10 @@ class Solution {
             char item = t.charAt(i);
             if (sKeys.get(item) == null) {
                 return false;
-            } else if (sKeys.get(item) == 1) {
-                sKeys.remove(item);
-            } else {
+            } else if (sKeys.get(item) > 1) {
                 sKeys.put(item,sKeys.get(item)-1) ;
+            }  else  {
+                sKeys.remove(item);
             }
         }
         if (sKeys.size() > 0) {
