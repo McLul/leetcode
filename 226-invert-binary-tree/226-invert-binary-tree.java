@@ -19,15 +19,15 @@ class Solution {
             return root;
         }
         TreeNode placeHolder;
-            placeHolder = root.left;
-            root.left = root.right;
-            root.right = placeHolder;
-            if (root.right != null) {
-               invertTree(root.right);
-            }
-            if (root.left != null) {
-                invertTree(root.left);
-            }
+        placeHolder = root.left;
+        root.left = root.right;
+        root.right = placeHolder;
+        if (root.right != null) {
+            invertTree(root.right);
+        }
+        if (root.left != null) {
+            invertTree(root.left);
+        }
         return root;
     }
 }
