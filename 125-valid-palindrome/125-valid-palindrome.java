@@ -8,8 +8,10 @@ class Solution {
                 parsedString += s.charAt(i);
             }
         }
-        for (int i = 0; i < Math.floor(parsedString.length()/2); i++) {
-            if (parsedString.charAt(i) != parsedString.charAt(parsedString.length()-1-i) ) {
+        int length = parsedString.length();
+        int floor = (int)Math.floor(length/2);
+        for (int i = 0; i < floor; i++) {
+            if (parsedString.charAt(i) != parsedString.charAt(length-1-i) ) {
                 return false;
             }
         }
