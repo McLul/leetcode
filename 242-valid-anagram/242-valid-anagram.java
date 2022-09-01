@@ -25,11 +25,7 @@ class Solution {
                 if (tKeys.get(entry.getKey()) == null) {
                     return false;
                 }
-                System.out.println(tKeys.get(entry.getKey()).getClass());
                 if (!tKeys.get(entry.getKey()).equals(entry.getValue())) {
-                    System.out.println(tKeys.get(entry.getKey()));
-                    System.out.println(entry.getValue());
-                    System.out.println(tKeys.get(entry.getKey()) - entry.getValue());
                     return false;
                 }
             }
