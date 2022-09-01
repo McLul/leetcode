@@ -16,8 +16,8 @@ class Solution {
             .entrySet()
             .stream()
             .sorted((comparingByValue()))
-            .collect( toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e2, LinkedHashMap::new));
-        int resultSize = sorted.entrySet().size();
+            .collect( toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e1, LinkedHashMap::new));
+        int resultSize = sorted.size();
         for (Map.Entry<Integer,Integer> entry : sorted.entrySet()) {
             int value = entry.getValue();
             if (k >= value) {
