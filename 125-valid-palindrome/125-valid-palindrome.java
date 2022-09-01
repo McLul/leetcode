@@ -4,7 +4,7 @@ class Solution {
         s = s.toLowerCase();
         for (int i = 0; i < s.length(); i++) {
             int asciiVal = (int)s.charAt(i);
-            if ((asciiVal >= 97 && asciiVal <= 122) || (asciiVal >= 48 && asciiVal <= 57) ) {
+            if ((asciiVal >= 48 && asciiVal <= 57) || (asciiVal >= 97 && asciiVal <= 122) ) {
                 parsedString += s.charAt(i);
             }
         }
