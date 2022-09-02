@@ -9,7 +9,7 @@ class Solution {
             } else if (nums[index] > target) {
                 upperBound = index-1;
             } 
-            index = (int)Math.ceil(((upperBound - lowerBound)/2) + lowerBound);
+            index = (int)Math.floor(((upperBound - lowerBound)/2) + lowerBound);
         }
         if (nums[index] == target) {
             return index;
