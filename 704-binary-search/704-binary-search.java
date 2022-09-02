@@ -1,6 +1,6 @@
 class Solution {
     public int search(int[] nums, int target) {
-        int index = (int)Math.floor(nums.length/2);
+        int index = (int)Math.ceil(nums.length/2);
         int lowerBound = 0;
         int upperBound = nums.length-1;
         while (nums[index] != target && lowerBound != upperBound) {
@@ -9,7 +9,7 @@ class Solution {
             } else if (nums[index] > target) {
                 upperBound = index-1;
             } 
-            index = (int)Math.floor(((upperBound - lowerBound)/2) + lowerBound);
+            index = (int)Math.ceil(((upperBound - lowerBound)/2) + lowerBound);
         }
         if (nums[index] == target) {
             return index;
