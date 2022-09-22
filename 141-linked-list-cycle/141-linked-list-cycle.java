@@ -17,9 +17,6 @@ public class Solution {
         ListNode one = head;
         ListNode two = head.next;
         while (two != null && one != two) {
-            if (two == one) {
-                return true;
-            }
             if (one.next != null && two.next != null && two.next.next != null) {
               one = one.next;
               two = two.next.next;  
@@ -27,6 +24,9 @@ public class Solution {
                 return false;
             }
         }
-        return true;
+        if (two == one) {
+            return true;
+        }
+        return false;
     }
 }
