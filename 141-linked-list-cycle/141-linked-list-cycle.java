@@ -26,8 +26,6 @@ public class Solution {
             } else {
                 return false;
             }
-            System.out.println(one);
-            System.out.println(two);
         }
         return true;
     }
