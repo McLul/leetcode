@@ -19,13 +19,15 @@ public class Solution extends VersionControl {
         int min = 1;
         int max  = n;
         int index = (int)Math.floor(n/2);
-        while (isBadVersion(index) != true || isBadVersion(index-1) != false || isBadVersion(index+1) != true ) {
-            if (isBadVersion(index)) {
+        boolean currIndex = isBadVersion(index);
+        while (currIndex != true || isBadVersion(index-1) != false || isBadVersion(index+1) != true ) {
+            if (currIndex) {
                 max = index-1;
             } else {
                 min = index+1;
             }
             index = (int)Math.floor((max-min)/2 + min);
+            currIndex = isBadVersion(index);
         }
         return index;
      }
