@@ -19,7 +19,7 @@ public class Solution extends VersionControl {
         int min = 1;
         int max  = n;
         int index = (int)Math.floor(n/2);
-        while (isBadVersion(index-1) != false || isBadVersion(index+1) != true || isBadVersion(index) != true) {
+        while (isBadVersion(index) != true || isBadVersion(index-1) != false || isBadVersion(index+1) != true ) {
             if (isBadVersion(index)) {
                 max = index-1;
             } else {
