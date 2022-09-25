@@ -18,7 +18,7 @@ public class Solution extends VersionControl {
         }
         int min = 1;
         int max  = n;
-        int index = (int)Math.ceil(n/2);
+        int index = (int)Math.floor(n/2);
         boolean currIndex = isBadVersion(index);
         while (currIndex == false || isBadVersion(index-1) == true || isBadVersion(index+1) == false ) {
             if (currIndex) {
@@ -26,7 +26,7 @@ public class Solution extends VersionControl {
             } else {
                 min = index+1;
             }
-            index = (int)Math.ceil((max-min)/2 + min);
+            index = (int)Math.floor((max-min)/2 + min);
             currIndex = isBadVersion(index);
         }
         return index;
