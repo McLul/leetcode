@@ -20,7 +20,7 @@ public class Solution extends VersionControl {
         int max  = n;
         int index = (int)Math.floor(n/2);
         boolean currIndex = isBadVersion(index);
-        while (currIndex == false || isBadVersion(index+1) == false || isBadVersion(index-1) == true) {
+        while (currIndex == false || isBadVersion(index-1) == true || isBadVersion(index+1) == false ) {
             if (currIndex) {
                 max = index-1;
             } else {
