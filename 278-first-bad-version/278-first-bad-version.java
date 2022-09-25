@@ -9,9 +9,9 @@ public class Solution extends VersionControl {
             } else {
                 return 0;
             }
-        } else if (n == (int)Math.pow(2,31)) {
-            if (isBadVersion((int)Math.pow(2,31) - 1)){
-                n = (int)Math.pow(2,31)-1;
+        } else if (n == 2147483647) {
+            if (isBadVersion(2147483646)){
+                n = 2147483646;
             } else {
                 return n;
             }
