@@ -12,7 +12,6 @@ class Solution {
             }
         }
         for (char i : mappedString.keySet()) {
-            int count  = mappedString.get(i);
             results += Math.floor(mappedString.get(i)/2)*2;
             if (mappedString.get(i)%2 != 0) {
                 singleChar = true;
