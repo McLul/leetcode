@@ -1,7 +1,6 @@
 class Solution {
     public int longestPalindrome(String s) {
         int results = 0;
-        boolean singleChar = false;
         HashMap<Character, Integer> mappedString = new HashMap<Character, Integer>();
         for (int i = 0; i < s.length(); i++) {
             char myChar = s.charAt(i);
@@ -13,11 +12,8 @@ class Solution {
         }
         for (char i : mappedString.keySet()) {
             results += Math.floor(mappedString.get(i)/2)*2;
-            if (mappedString.get(i)%2 != 0) {
-                singleChar = true;
-            }
         }
-        if (singleChar) {
+        if (s.length()-results > 0) {
             return results + 1;
         } else {
             return results;
