@@ -1,5 +1,6 @@
 class Solution {
     boolean validBoard = true;
+    
     char[][] copyBoard;
     public boolean isValidSudoku(char[][] board) {
         this.copyBoard = board;
@@ -28,11 +29,14 @@ class Solution {
            for (int ii = ySegment*3; ii< ySegment*3+3; ii++){
                //System.out.println(this.copyBoard[ii][i]);
                checkedValue = Character.getNumericValue(this.copyBoard[ii][i]);
-                if( this.copyBoard[ii][i] != '.' && boxValues[checkedValue] == 0 ) {
-                   boxValues[checkedValue]=1;
-                } else if (this.copyBoard[ii][i] != '.' && boxValues[checkedValue] == 1) {
-                   return false;
-                } 
+               if (this.copyBoard[ii][i] != '.') {
+                    if( boxValues[checkedValue] == 0 ) {
+                        boxValues[checkedValue]=1;
+                    } else if ( boxValues[checkedValue] == 1) {
+                        return false;
+                    }  
+               }
+                
             } 
         }
         return true;
@@ -42,11 +46,14 @@ class Solution {
         int checkedValue;
         for (int i = 0; i < 9; i++){
                 checkedValue = Character.getNumericValue(this.copyBoard[row][i]);
-                if(this.copyBoard[row][i] != '.' && rowValues[checkedValue] == 0  ) {
-                    rowValues[checkedValue] =1;
-                } else if (this.copyBoard[row][i] != '.' && rowValues[checkedValue] == 1) {
-                   return false;
+                if (this.copyBoard[row][i] != '.') {
+                    if( rowValues[checkedValue] == 0  ) {
+                        rowValues[checkedValue] =1;
+                    } else if ( rowValues[checkedValue] == 1) {
+                       return false;
+                    } 
                 }
+                
         }
         return true; 
     }
@@ -55,11 +62,14 @@ class Solution {
         int checkedValue;
         for (int i = 0; i < 9; i++){
                 checkedValue = Character.getNumericValue(this.copyBoard[i][col]);
-                if( this.copyBoard[i][col] != '.' && colValues[checkedValue] == 0 ) {
-                   colValues[checkedValue]= 1;
-                } else if (this.copyBoard[i][col] != '.' && colValues[checkedValue] == 1) {
-                   return false;
+                if (this.copyBoard[i][col] != '.') {
+                    if(  colValues[checkedValue] == 0 ) {
+                        colValues[checkedValue]= 1;
+                    } else if (  colValues[checkedValue] == 1) {
+                        return false;
+                    }   
                 }
+                
         } 
         return true;
     }
