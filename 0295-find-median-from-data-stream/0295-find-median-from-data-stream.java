@@ -40,14 +40,13 @@ class MedianFinder {
             if (listToInsert.get(middle) == numToInsert) {
                 //System.out.println("stuck");
                 listToInsert.add(middle,numToInsert);
-                return;
+                break;
             } else if (numToInsert > listToInsert.get(middle)) {
                 //System.out.println("stuck2");
                 start = middle+1;
                 middle = (middle + (end-middle)/2);
                 if (start>=end) {
                     listToInsert.add(end,numToInsert);
-                    return;
                 }
 
             } else if  (numToInsert < listToInsert.get(middle)) {
@@ -56,7 +55,6 @@ class MedianFinder {
                 middle = (end/2);
                 if (start>=end) {
                     listToInsert.add(end,numToInsert);
-                    return;
                 }
             }
         }
