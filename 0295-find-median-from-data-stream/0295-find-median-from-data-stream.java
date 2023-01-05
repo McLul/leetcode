@@ -26,9 +26,7 @@ class MedianFinder {
     private void insertion(List<Double> listToInsert, double numToInsert) {
         int listSize = listToInsert.size();
         boolean largestNumber = true;
-        if (listSize == 0 ) {
-            listToInsert.add(numToInsert);
-        } else {
+
             for (int i = 0; i < listSize; i++) {
                 
                 if (numToInsert <= listToInsert.get(i)) {
@@ -40,8 +38,7 @@ class MedianFinder {
             if (largestNumber) {
                 listToInsert.add(numToInsert);
             }
-        
-        } 
+         
         
         //System.out.println(listToInsert);
     }
