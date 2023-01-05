@@ -1,5 +1,6 @@
 class MedianFinder {
     List<Double> list;
+    double two = 2;
     public MedianFinder() {
         this.list = new ArrayList<Double>();
     }
@@ -15,7 +16,7 @@ class MedianFinder {
         } else if (this.list.size() == 1) {
             return this.list.get(0);
         } else if (this.list.size() % 2 == 0) {
-            return ((this.list.get((int)Math.floor((double)(this.list.size()-1)/ 2))) + this.list.get((int)Math.ceil((double)(this.list.size()-1) / 2)))/ 2;
+            return ((this.list.get((int)Math.floor((double)(this.list.size()-1)/ two))) + this.list.get((int)Math.ceil((double)(this.list.size()-1) / two)))/ two;
         } else {
             return this.list.get((this.list.size()-1)/2);
         }
