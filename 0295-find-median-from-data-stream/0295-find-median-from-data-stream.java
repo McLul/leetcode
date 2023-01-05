@@ -44,7 +44,7 @@ class MedianFinder {
             } else if (numToInsert > listToInsert.get(middle)) {
                 //System.out.println("stuck2");
                 start = middle+1;
-                middle = (middle + (end-middle)/2);
+                middle = (int)Math.ceil(middle + (end-middle)/2);
                 if (start>=end) {
                     listToInsert.add(end,numToInsert);
                 }
@@ -52,7 +52,7 @@ class MedianFinder {
             } else if  (numToInsert < listToInsert.get(middle)) {
                 //System.out.println("stuck3");
                 end = middle;
-                middle = (end/2);
+                middle = (int)Math.floor(end/2);
                 if (start>=end) {
                     listToInsert.add(end,numToInsert);
                 }
