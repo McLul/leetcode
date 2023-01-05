@@ -6,7 +6,7 @@ class MedianFinder {
     }
     
     public void addNum(double num) {
-       insertion(this.list, num);
+       binaryInsertion(this.list, num);
         
     }
     
@@ -23,21 +23,49 @@ class MedianFinder {
         
     }
     
-    private void insertion(List<Double> listToInsert, double numToInsert) {
+    private void binaryInsertion(List<Double> listToInsert, double numToInsert) {
         int listSize = listToInsert.size();
+        if (listSize == 0) {
+             listToInsert.add(numToInsert);
+             return;
+        }
         boolean largestNumber = true;
+        boolean smallestNumber=false;
+        int start = 0;
+        int end = listToInsert.size();
+        int middle = (int)Math.floor(end/2);
+        while (start < end) {
+           // System.out.println(start + "start");
+           // System.out.println(middle + "middle");
+            //System.out.println(end + "end");
+            //System.out.println(listToInsert.get(middle) + "middle item");
+            //System.out.println(listToInsert+ "numIns" +  numToInsert);
+            if (listToInsert.get(middle) == numToInsert) {
+                //System.out.println("stuck");
+                listToInsert.add(middle,numToInsert);
+                break;
+            } else if (numToInsert > listToInsert.get(middle)) {
+                //System.out.println("stuck2");
+                start = middle+1;
+                middle = (int)Math.floor(middle + (end-middle)/2);
+                if (start>=end) {
+                    listToInsert.add(end,numToInsert);
+                }
 
-            for (int i = 0; i < listSize; i++) {
-                
-                if (numToInsert <= listToInsert.get(i)) {
-                    listToInsert.add(i, numToInsert);
-                    largestNumber = false;
-                    break;
+            } else if  (numToInsert < listToInsert.get(middle)) {
+                //System.out.println("stuck3");
+                end = middle;
+                middle = (int)Math.floor(end/2);
+                if (start>=end) {
+                    listToInsert.add(end,numToInsert);
                 }
             }
-            if (largestNumber) {
-                listToInsert.add(numToInsert);
-            }
+        }
+        
+            
+            // if (start >= end) {
+            //         listToInsert.add(numToInsert);
+            // }
          
         
         //System.out.println(listToInsert);
