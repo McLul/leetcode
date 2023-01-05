@@ -30,7 +30,7 @@ class MedianFinder {
         }
         int start = 0;
         int end = listToInsert.size();
-        int middle = (int)Math.floor(end/2);
+        int middle = (end/2);
         while (start < end) {
            // System.out.println(start + "start");
            // System.out.println(middle + "middle");
