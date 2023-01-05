@@ -31,7 +31,7 @@ class MedianFinder {
         }
         int start = 0;
         int end = listToInsert.size();
-        int middle = (int)Math.floor(end/2);
+        int middle = (int)(end/2);
         while (start < end) {
            // System.out.println(start + "start");
            // System.out.println(middle + "middle");
@@ -45,26 +45,20 @@ class MedianFinder {
             } else if (numToInsert > listToInsert.get(middle)) {
                 //System.out.println("stuck2");
                 start = middle+1;
-                middle = (int)Math.floor(middle + (end-middle)/2);
-                if (start>=end) {
-                    listToInsert.add(end,numToInsert);
-                }
+                middle = (int)(middle + (end-middle)/2);
 
             } else if  (numToInsert < listToInsert.get(middle)) {
                 //System.out.println("stuck3");
                 end = middle;
-                middle = (int)Math.floor(end/2);
-                if (start>=end) {
-                    listToInsert.add(end,numToInsert);
-                }
+                middle = (int)(end/2);
+               
             }
         }
         
-            
-            // if (start >= end) {
-            //         listToInsert.add(numToInsert);
-            // }
-         
+             if (start>=end) {
+                    listToInsert.add(end,numToInsert);
+                }
+
         
         //System.out.println(listToInsert);
     }
