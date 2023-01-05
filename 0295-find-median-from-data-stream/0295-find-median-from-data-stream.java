@@ -1,6 +1,5 @@
 class MedianFinder {
     List<Double> list;
-    double two = 2;
     public MedianFinder() {
         this.list = new ArrayList<Double>();
     }
