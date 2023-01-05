@@ -17,7 +17,7 @@ class MedianFinder {
         } else if (this.list.size() == 1) {
             return this.list.get(0);
         } else if (this.list.size() % 2 == 0) {
-            return ((this.list.get((int)Math.floor((double)(this.list.size()-1)/ 2))) + this.list.get((int)Math.ceil((double)(this.list.size()-1) / 2)))/ two;
+            return ((this.list.get((int)Math.floor((double)(this.list.size()-1)/ (double)2))) + this.list.get((int)Math.ceil((double)(this.list.size()-1) / (double)2)))/ (double)2;
         } else {
             return this.list.get((this.list.size()-1)/2);
         }
