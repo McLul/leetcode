@@ -16,7 +16,7 @@ class MedianFinder {
         } else if (this.list.size() == 1) {
             return this.list.get(0);
         } else if (this.list.size() % 2 == 0) {
-            return ((this.list.get((int)Math.floor((double)(this.list.size()-1)/ two))) + this.list.get((int)Math.ceil((double)(this.list.size()-1) / two)))/ two;
+            return ((this.list.get((int)Math.floor((this.list.size()-1)/ two))) + this.list.get((int)Math.ceil((this.list.size()-1) / two)))/ two;
         } else {
             return this.list.get((this.list.size()-1)/2);
         }
@@ -29,6 +29,8 @@ class MedianFinder {
              listToInsert.add(numToInsert);
              return;
         }
+        boolean largestNumber = true;
+        boolean smallestNumber=false;
         int start = 0;
         int end = listToInsert.size();
         int middle = (int)Math.floor(end/2);
@@ -46,19 +48,25 @@ class MedianFinder {
                 //System.out.println("stuck2");
                 start = middle+1;
                 middle = (int)Math.floor(middle + (end-middle)/2);
+                if (start>=end) {
+                    listToInsert.add(end,numToInsert);
+                }
 
             } else if  (numToInsert < listToInsert.get(middle)) {
                 //System.out.println("stuck3");
                 end = middle;
                 middle = (int)Math.floor(end/2);
-               
+                if (start>=end) {
+                    listToInsert.add(end,numToInsert);
+                }
             }
         }
         
-             if (start>=end) {
-                    listToInsert.add(end,numToInsert);
-                }
-
+            
+            // if (start >= end) {
+            //         listToInsert.add(numToInsert);
+            // }
+         
         
         //System.out.println(listToInsert);
     }
