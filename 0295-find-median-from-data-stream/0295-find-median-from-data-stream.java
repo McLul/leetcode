@@ -29,8 +29,6 @@ class MedianFinder {
              listToInsert.add(numToInsert);
              return;
         }
-        boolean largestNumber = true;
-        boolean smallestNumber=false;
         int start = 0;
         int end = listToInsert.size();
         int middle = (int)Math.floor(end/2);
