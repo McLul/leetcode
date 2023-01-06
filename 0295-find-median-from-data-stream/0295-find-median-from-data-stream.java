@@ -51,10 +51,7 @@ class MedianFinder {
             }
         }
         
-        
-         
-        
-        //System.out.println(listToInsert);
+
     }
 }
 
