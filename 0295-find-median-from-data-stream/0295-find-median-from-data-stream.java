@@ -51,9 +51,7 @@ class MedianFinder {
             }
         }
         
-            
-            //         listToInsert.add(numToInsert);
-            // }
+        
          
         
         //System.out.println(listToInsert);
