@@ -29,7 +29,6 @@ class MedianFinder {
              return;
         }
         int start = 0;
-        //
         int end = listToInsert.size();
         int middle = (int)Math.floor(end/2);
         while (start < end) {
