@@ -60,7 +60,6 @@ class MedianFinder {
         }
         
             
-            //         listToInsert.add(numToInsert);
             // }
          
         
