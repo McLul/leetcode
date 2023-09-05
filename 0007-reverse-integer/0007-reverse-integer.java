@@ -20,17 +20,30 @@ class Solution {
         } 
         numberList.add(tempX);
         int numberSize = numberList.size();
-        for(int i = 0; i < numberSize; i++) { //put it back together
-            if(numberList.get(i) != 0 && answerVal == Integer.MAX_VALUE ) {
-                return 0;
+        if(numberSize < 10) {
+                for(int i = 0; i < numberSize; i++) { //put it back together
+                answerVal += numberList.get(i)*Math.pow(10,numberSize-1-i);
             }
-            answerVal += numberList.get(i)*Math.pow(10,numberSize-1-i);
-        }
-        for (int i = 0; i < numberList.size();i++) {
-            if(numberList.get(i) != 0) {
-                break;
+            for (int i = 0; i < numberList.size();i++) {
+                if(numberList.get(i) != 0) {
+                    break;
+                }
+                zeroesAtEnd+=1;
             }
-            zeroesAtEnd+=1;
+        } else {
+            for(int i = 0; i < numberSize; i++) { //put it back together
+                if(numberList.get(i) != 0 && answerVal == Integer.MAX_VALUE ) {
+                    return 0;
+                }
+                answerVal += numberList.get(i)*Math.pow(10,numberSize-1-i);
+            }
+            for (int i = 0; i < numberList.size();i++) {
+                if(numberList.get(i) != 0) {
+                    break;
+                }
+                zeroesAtEnd+=1;    
+            }
+        
         }
         
         tempAnswerVal = answerVal;
