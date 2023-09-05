@@ -1,11 +1,13 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        int temp;
+        int tempNum;
+        int tempNumTwo;
         for(int i = 0; i<nums.length-1; i++) {
-            temp = nums[i];
+            tempNum = nums[i];
             for (int ii = i+1; ii<nums.length;ii++)
             {
-                if (temp + nums[ii] == target) {
+                tempNumTwo = nums[ii];
+                if (tempNum + tempNumTwo == target) {
                     return new int[] {i, ii};
                 }
             }
