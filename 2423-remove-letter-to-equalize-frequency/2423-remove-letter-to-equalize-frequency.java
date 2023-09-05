@@ -25,7 +25,8 @@ class Solution {
             charAdded = false; // reset  
         }
         // done adding letters now find highest freq
-        if(charList.size() == 1) { // 1 letter
+        int charListSize = charList.size();
+        if(charListSize == 1) { // 1 letter
             return true;
         } 
         Letter highestFreq = null;
@@ -50,7 +51,7 @@ class Solution {
             }
         }
         
-        if (charList.size() == 2) { // 2 letter try
+        if (charListSize == 2) { // 2 letter try
             if (highestFreq.size == 1 || lowestFreq.size == 1) {
                 return true;
             } else if (charList.get(0).size - 1 == charList.get(1).size || charList.get(1).size - 1 == charList.get(0).size) {
@@ -60,7 +61,7 @@ class Solution {
         }
         
         // now check highestFreq  against all other letters and make sure it only exceeds all of their values by one
-        if (highestFreqCount == charList.size()-1 && lowestFreq.size == 1 && lowestFreqCount == 1) {
+        if (highestFreqCount == charListSize-1 && lowestFreq.size == 1 && lowestFreqCount == 1) {
             return true;
         }
         else if (highestFreq.size == 1  || (highestFreq.size - 1 == secondHighestFreq.size && secondHighestFreq.size == lowestFreq.size)) {
