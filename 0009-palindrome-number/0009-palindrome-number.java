@@ -8,9 +8,10 @@ class Solution {
            intArray.add(x%10);
            x /= 10;
        }
-    intArray.add(x);
-        for (int i = 0; i<intArray.size()/2; i++) {
-            if (intArray.get(i) != intArray.get(intArray.size()-1-i)) {
+        intArray.add(x); 
+        int arraySize = intArray.size();
+        for (int i = 0; i<arraySize/2; i++) {
+            if (intArray.get(i) != intArray.get(arraySize-1-i)) {
                 return false;
             }
         }
