@@ -3,6 +3,9 @@ class Solution {
         if (x < 0) {
             return false;
         }
+        if (x < 10) {
+            return true;
+        }
      ArrayList<Integer> intArray = new ArrayList<Integer>();
        while (x > 9){
            intArray.add(x%10);
