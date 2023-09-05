@@ -44,10 +44,6 @@ class Solution {
             checkedAnswer += numberListCheck.get(i)*Math.pow(10,numberCheckSize-1-i);
         }
         checkedAnswer*=Math.pow(10,zeroesAtEnd);
-        
-        System.out.println(checkedAnswer);
-        System.out.println(x);
-        System.out.println(answerVal);
         return checkedAnswer*signHolder == x*signHolder ? answerVal*signHolder : 0;
         
     }
