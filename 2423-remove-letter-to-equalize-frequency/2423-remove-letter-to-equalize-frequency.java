@@ -59,20 +59,13 @@ class Solution {
             return false;
         }
         
-        System.out.println(highestFreq.letter);
-        System.out.println(secondHighestFreq.letter);
-        System.out.println(lowestFreq.letter);
-        System.out.println(lowestFreqCount);
         // now check highestFreq  against all other letters and make sure it only exceeds all of their values by one
         if (highestFreqCount == charList.size()-1 && lowestFreq.size == 1 && lowestFreqCount == 1) {
-            System.out.println("hate");
             return true;
         }
         else if (highestFreq.size == 1  || (highestFreq.size - 1 == secondHighestFreq.size && secondHighestFreq.size == lowestFreq.size)) {
-            System.out.println("hate2");
             return true;
         } else if (highestFreqCount == 1 && lowestFreq.size  == secondHighestFreq.size && highestFreq.size-1 == lowestFreq.size) {
-            System.out.println("hate3");
             return true;
         }
         
