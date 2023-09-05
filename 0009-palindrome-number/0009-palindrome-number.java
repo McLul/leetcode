@@ -12,10 +12,9 @@ class Solution {
            x /= 10;
        }
         intArray.add(x); 
-        int arraySize = intArray.size();
-        int arrayEnd = arraySize-1;
-        for (int i = 0; i<arraySize/2; i++) {
-            if (intArray.get(i) != intArray.get(arrayEnd-i)) {
+        int size = intArray.size();
+        for (int i = 0; i<size/2; i++) {
+            if (intArray.get(i) != intArray.get(size-1-i)) {
                 return false;
             }
         }
