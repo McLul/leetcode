@@ -3,7 +3,6 @@ class Solution {
         int result = 1;
         for (int i = 0; i<nums.length-1;i++) {
             int lastPosition = i+1;
-            boolean uniqueNumber = false;
             //while loop that goes to next unique number then 
             while (nums[lastPosition]==nums[i] && lastPosition < nums.length-1) {
                 lastPosition++;
