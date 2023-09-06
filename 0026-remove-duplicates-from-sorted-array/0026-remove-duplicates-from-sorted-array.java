@@ -1,5 +1,7 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
+        
+        /* future improvement idea : keep track of moved spaces and only check values beyond those rather than going back and rewriting entire loop */
         int result = 1; //result starts at one because we need to add the last unique value that wont be incorpotated into the loop
         int lastPosition;
         for (int i = 0; i<nums.length-1;i++) {
