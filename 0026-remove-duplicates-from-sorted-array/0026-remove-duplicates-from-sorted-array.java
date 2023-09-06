@@ -17,9 +17,6 @@ class Solution {
             }
             result+=1;
         }
-        for(int x = 0; x < nums.length;x ++) {
-            System.out.println(nums[x]);
-        }
         return result;
     }
 }
