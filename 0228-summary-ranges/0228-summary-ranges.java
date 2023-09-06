@@ -8,7 +8,7 @@ class Solution {
         int firstNum = nums[0];
         int lastNum = nums[0];
         if ( nums.length == 1) {
-            results.add(createRange(firstNum, lastNum));
+            results.add(Integer.toString(nums[0]));
             return results;
         }
         for (int i = 1; i <nums.length;i++) { 
