@@ -1,19 +1,14 @@
 class Solution {
     public int lengthOfLastWord(String s) {
         int wordLength = 0;
-        boolean nextWord = false;
-        for (int i = 0; i < s.length(); i++) {
-            if(s.charAt(i)== ' ') { // case : spaces
-                nextWord = true;
-            } 
-            
+        boolean word = false;
+        for (int i = s.length()-1; i >= 0 ; i--) {
             
             if (s.charAt(i) != ' '){ // case : letters
-                if (nextWord == true) {
-                    wordLength = 0;
-                }
-                wordLength+=1;
-                nextWord = false;
+                wordLength++;
+                word = true;
+            } else if (word == true){
+                return wordLength;
             }
             
             
@@ -22,3 +17,6 @@ class Solution {
         return wordLength;
     }
 }
+
+
+
