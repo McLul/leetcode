@@ -23,7 +23,6 @@ class Solution {
                 head = head.next;
             }
             placeHolder = head;
-            System.out.println(head.next.val);
             head.next.next = firstNode;
             head = head.next;
             placeHolder.next = null;
