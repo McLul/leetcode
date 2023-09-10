@@ -14,19 +14,19 @@ class Solution {
             return head;
         }
         int listLength = findListLength(head);
-        int timesToRotate = k%listLength;
+        int timesToRotate = k%listLength; // if you rotate 5 times on a 5 length list youll start at the same position
         ListNode firstNode = head;
         ListNode placeHolder = null;
         for (int i = 0; i < timesToRotate; i++) {
-            // add for loop to go through list length and change head
-            for (int ii = 0; ii < listLength-2; ii++) { 
+            // add for loop to go through list length and change head and tail
+            for (int ii = 0; ii < listLength-2; ii++) { // since we wont to find second to last node
                 head = head.next;
             }
-            placeHolder = head;
-            head.next.next = firstNode;
-            head = head.next;
-            placeHolder.next = null;
-            firstNode = head;
+            placeHolder = head; // we need to keep track of this node to modify it after it is no longer head
+            head.next.next = firstNode; // the last node becomes the firstNode
+            head = head.next; // makes head the correct head
+            placeHolder.next = null; // removes the pointer on new last node
+            firstNode = head;  // 
             
         }
         return head;
