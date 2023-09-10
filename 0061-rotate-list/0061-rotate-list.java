@@ -42,3 +42,6 @@ class Solution {
         return result;
     }
 }
+
+
+/* optimization idea: keep track of last node instead of first node so doesnt have to loop every rotation. */
