@@ -26,12 +26,12 @@ class Solution {
             head.next.next = firstNode; // the last node becomes the firstNode
             head = head.next; // makes head the correct head
             placeHolder.next = null; // removes the pointer on new last node
-            firstNode = head;  // 
+            firstNode = head; 
             
         }
         return head;
     }
-    public int findListLength(ListNode head) {
+    private int findListLength(ListNode head) {
         int result = 1;
         ListNode nodePosition = head;
         while (head.next != null) {
