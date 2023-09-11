@@ -12,15 +12,15 @@ class Solution {
                 if (nums[pointedPosition] != val) {
                     placeHolder = nums[i];
                     nums[i] = nums[pointedPosition];
-                    nums[pointedPosition] = placeHolder;   
+                    nums[pointedPosition] = placeHolder;    // insertion sort it out meets constraint of in place
                 }   
                 pointedPosition++;
             }
-            if (pointedPosition == nums.length) {
+            if (pointedPosition == nums.length) { // weve reached the end of our sort
                 break;
             }
         }
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {  // once sorted just find out how long the array is until we reach a val
             if (nums[i] == val) {
                 return result;
             } else {
