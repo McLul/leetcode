@@ -23,9 +23,9 @@ class Solution {
                 pointedPosition++;
             }
             if (pointedPosition == nums.length) { 
-                return nums[result] == val ? result : result + 1;
+                return nums[result] == val ? result : result + 1; // case:we have atleast one deleted element
             }
         }
-        return nums[result+1] == val ? result+1 : result + 2;
+        return nums[result+1] == val ? result+1 : result + 2; // case: no deleted elements so check last element 
     }
 }
