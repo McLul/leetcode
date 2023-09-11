@@ -1,13 +1,19 @@
 class Solution {
     public int removeElement(int[] nums, int val) {
-        if (nums.length == 0) {
+        if (nums.length == 0) { // clean up edge cases to optimize bottom code
             return 0;
+        } else if (nums.length == 1){ 
+            if (nums[0] == val) {
+                return 0;
+            }
+            return 1;
         }
         int pointedPosition = 1;
         int result = 0;
         int placeHolder;
         for (int  i = 0; i < nums.length-1; i++) {
             pointedPosition = i+1;
+            result = i;
             while (nums[i] == val && pointedPosition < nums.length) {
                 if (nums[pointedPosition] != val) {
                     placeHolder = nums[i];
@@ -16,17 +22,10 @@ class Solution {
                 }   
                 pointedPosition++;
             }
-            if (pointedPosition == nums.length) { // weve reached the end of our sort
-                break;
+            if (pointedPosition == nums.length) { 
+                return nums[result] == val ? result : result + 1;
             }
         }
-        for (int i = 0; i < nums.length; i++) {  // once sorted just find out how long the array is until we reach a val
-            if (nums[i] == val) {
-                return result;
-            } else {
-                result++;
-            }
-        }
-        return result;
+        return nums[result+1] == val ? result+1 : result + 2;
     }
 }
