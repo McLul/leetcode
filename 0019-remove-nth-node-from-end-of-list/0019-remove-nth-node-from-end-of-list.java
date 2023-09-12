@@ -10,7 +10,7 @@
  */
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        if (head.next == null) {  // case 1 : have to remove 1 == no more list
+        if (head.next == null) {  // case 1 : have to remove 1 and list length = 1 
             return null;
         }
         n = countNodes(head) - n;
