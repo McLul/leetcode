@@ -13,12 +13,12 @@ class Solution {
         if (head.next == null) {  // case 1 : have to remove 1 == no more list
             return null;
         }
-        ListNode headPtr = head;
-        ListNode beforePtr = head;
         n = countNodes(head) - n;
         if (n == 0) {     // case 2:  first position is selected for deletion so just move head to next position
             return head.next;    
         }
+        ListNode headPtr = head;
+        ListNode beforePtr = head;
         while (n != 0) { // case 3 : node is somewhere in the middle
             beforePtr = head;
             head = head.next;
