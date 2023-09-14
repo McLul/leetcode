@@ -28,9 +28,9 @@ class Solution {
             middlePoint = (endIndex-startIndex)/2 + startIndex;
             if (nums[middlePoint] < target) {
                 startIndex = middlePoint+1;
-            } /* else if (nums[middlePoint] == target) { // this can potentially save us time on the lower end however if the list is long the cost increased
+            } else if (nums[middlePoint] == target) { // this will save us time 
                 return middlePoint;
-            } */ else {
+            }  else {
                 endIndex = middlePoint;
             }
         }
