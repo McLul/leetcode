@@ -10,9 +10,9 @@ class Solution {
             middlePoint = (endIndex-startIndex)/2 + startIndex;
             if (nums[middlePoint] > nums[endIndex]) {
                 startIndex = middlePoint+1;
-            } else if (nums[middlePoint] == target) {
+            } /*else if (nums[middlePoint] == target) {  // unknown savings here, it's just a lucky guess if we hit it while searching for pivot
                 return middlePoint;
-            } else {
+            } */ else {
                 endIndex = middlePoint;
             }
         }
