@@ -10,12 +10,13 @@ class Solution {
             middlePoint = (endIndex-startIndex)/2 + startIndex;
             if (nums[middlePoint] > nums[endIndex]) {
                 startIndex = middlePoint+1;
+            } else if (nums[middlePoint] == target) {
+                return middlePoint;
             } else {
                 endIndex = middlePoint;
             }
         }
         int pivotPosition = startIndex; // we now have 2 lists and need to discern which one to search
-        //System.out.println(pivotPosition);
         if (pivotPosition == 0) { // case : no rotation search entire list
             startIndex = 0;
             endIndex = nums.length-1;
@@ -29,6 +30,8 @@ class Solution {
             middlePoint = (endIndex-startIndex)/2 + startIndex;
             if (nums[middlePoint] < target) {
                 startIndex = middlePoint+1;
+            } else if (nums[middlePoint] == target) {
+                return middlePoint;
             } else {
                 endIndex = middlePoint;
             }
