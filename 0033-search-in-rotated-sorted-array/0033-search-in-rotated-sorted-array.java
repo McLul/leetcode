@@ -5,15 +5,17 @@ class Solution {
         } 
         int startIndex = 0;
         int endIndex = nums.length-1;
+        int middlePoint = (endIndex-startIndex)/2 + startIndex;
         while (startIndex != endIndex) { // we will first do a binary search to find the pivot position
-            if (nums[(endIndex-startIndex)/2 + startIndex] > nums[endIndex]) {
-                startIndex = (endIndex-startIndex)/2 + startIndex+1;
+            middlePoint = (endIndex-startIndex)/2 + startIndex;
+            if (nums[middlePoint] > nums[endIndex]) {
+                startIndex = middlePoint+1;
             } else {
-                endIndex = (endIndex-startIndex)/2 + startIndex;
+                endIndex = middlePoint;
             }
         }
         int pivotPosition = startIndex; // we now have 2 lists and need to discern which one to search
-        System.out.println(pivotPosition);
+        //System.out.println(pivotPosition);
         if (pivotPosition == 0) { // case : no rotation search entire list
             startIndex = 0;
             endIndex = nums.length-1;
@@ -24,10 +26,11 @@ class Solution {
         } 
         // then we will do a binary search on whichever part of the array should contain the element solution complexity is 1.5*log(n) amortizied O(log n) 
         while (startIndex != endIndex) { // now we find the target
-            if (nums[(endIndex-startIndex)/2 + startIndex] < target) {
-                startIndex = (endIndex-startIndex)/2 + startIndex+1;
+            middlePoint = (endIndex-startIndex)/2 + startIndex;
+            if (nums[middlePoint] < target) {
+                startIndex = middlePoint+1;
             } else {
-                endIndex = (endIndex-startIndex)/2 + startIndex;
+                endIndex = middlePoint;
             }
         }
         if (nums[startIndex] == target) {
