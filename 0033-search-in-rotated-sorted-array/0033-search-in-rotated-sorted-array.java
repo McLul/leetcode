@@ -28,7 +28,7 @@ class Solution {
             middlePoint = (endIndex-startIndex)/2 + startIndex;
             if (nums[middlePoint] < target) {
                 startIndex = middlePoint+1;
-            } else if (nums[middlePoint] == target) { // this will save us time on the low end, but potentially cost us on higher end, both negligible
+            } else if (nums[middlePoint] == target) { // this will save us time on the low end
                 return middlePoint;
             }  else {
                 endIndex = middlePoint;
