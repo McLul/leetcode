@@ -10,9 +10,7 @@ class Solution {
             middlePoint = (endIndex-startIndex)/2 + startIndex;
             if (nums[middlePoint] > nums[endIndex]) {
                 startIndex = middlePoint+1;
-            } /*else if (nums[middlePoint] == target) {  // unknown savings here, it's just a lucky guess if we hit it while searching for pivot
-                return middlePoint;
-            } */ else {
+            }  else {
                 endIndex = middlePoint;
             }
         }
@@ -30,9 +28,9 @@ class Solution {
             middlePoint = (endIndex-startIndex)/2 + startIndex;
             if (nums[middlePoint] < target) {
                 startIndex = middlePoint+1;
-            } else if (nums[middlePoint] == target) {
+            } /* else if (nums[middlePoint] == target) { // this can potentially save us time on the lower end however if the list is long the cost increased
                 return middlePoint;
-            } else {
+            } */ else {
                 endIndex = middlePoint;
             }
         }
