@@ -28,6 +28,6 @@ class Solution {
        }
        left = isSameTree(p.left,q.left);
        right = isSameTree(p.right,q.right);
-       return result && left && right;
+       return result && left && right; // if any values are false return false
     }
 }
