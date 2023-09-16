@@ -15,27 +15,27 @@
  */
 class Solution {
     public boolean isSameTree(TreeNode p, TreeNode q) {
-       if (p == null && q != null || q == null && p != null) { // case : one is null 
+       if (p == null && q != null || q == null && p != null) { // case : one of the heads is null
            return false;
-       } else if (p == null && q == null) {
+       } else if (p == null && q == null) { // case : both are null so its true
            return true;
        }
        boolean result = true;
        boolean left = true;
        boolean right = true;
-       if (p.val != q.val) {
+       if (p.val != q.val) { // case : not equal nodes means not same tree 
            return false;
        }
-       if (p.left != null && q.left != null) {
+       
            left = isSameTree(p.left,q.left);
-       } else if (p.left == null && q.left != null || q.left == null && p.left != null ){
+        /*else if (p.left == null && q.left != null || q.left == null && p.left != null ){ // case :  doesnt have 2 branches to check on left
            return false;
-       }
-       if (p.right != null && q.right != null) {
+       }*/
+      
            right = isSameTree(p.right,q.right);
-       } else if (p.right == null && q.right != null || q.right == null && p.right != null ){
+        /*else if (p.right == null && q.right != null || q.right == null && p.right != null ){// case :  doesnt have 2 branches to check on right
            return false;
-       }
-       return result && left && right ? true : false; 
+       }*/
+       return result && left && right;
     }
 }
