@@ -36,6 +36,6 @@ class Solution {
        } else if (p.right == null && q.right != null || q.right == null && p.right != null ){
            return false;
        }
-       return result && left && right ? true : false;
+       return result && left && right;
     }
 }
