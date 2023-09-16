@@ -15,7 +15,7 @@
  */
 class Solution {
     public boolean isSameTree(TreeNode p, TreeNode q) {
-       if (p == null && q != null || q == null && p != null) {
+       if (p == null && q != null || q == null && p != null) { // case : one is null 
            return false;
        } else if (p == null && q == null) {
            return true;
@@ -36,6 +36,6 @@ class Solution {
        } else if (p.right == null && q.right != null || q.right == null && p.right != null ){
            return false;
        }
-       return result && left && right ? true : false;
+       return result && left && right;
     }
 }
