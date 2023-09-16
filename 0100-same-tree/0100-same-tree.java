@@ -26,16 +26,8 @@ class Solution {
        if (p.val != q.val) { // case : not equal nodes means not same tree 
            return false;
        }
-       
-           left = isSameTree(p.left,q.left);
-        /*else if (p.left == null && q.left != null || q.left == null && p.left != null ){ // case :  doesnt have 2 branches to check on left
-           return false;
-       }*/
-      
-           right = isSameTree(p.right,q.right);
-        /*else if (p.right == null && q.right != null || q.right == null && p.right != null ){// case :  doesnt have 2 branches to check on right
-           return false;
-       }*/
+       left = isSameTree(p.left,q.left);
+       right = isSameTree(p.right,q.right);
        return result && left && right;
     }
 }
