@@ -4,13 +4,12 @@ class Solution {
         for (int i = 0; i < haystack.length(); i++) {
             if (haystack.charAt(i) == needle.charAt(needleEndPtr)) {
                 needleEndPtr += 1;
-            }  else if (needleEndPtr >= 1){
+            }  else {
                 i -= needleEndPtr;
                 needleEndPtr = 0;  
             } if (needleEndPtr == needle.length()) {
                 return i - needle.length()+1;
             }
-            System.out.println(Integer.toString(needleEndPtr) + " " + Integer.toString(i));
         }
         return -1;
     }
