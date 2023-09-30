@@ -12,20 +12,19 @@ class Solution {
     public ListNode swapPairs(ListNode head) {
         int counter = 1;
         ListNode result = head == null || head.next == null ? head : head.next;
-        ListNode even = null;
         ListNode odd = null;
         ListNode pairEnd = null;
         while (head != null) {
             if (counter % 2 == 0)
             {
-                even = head; 
-                odd.next = even.next;
-                even.next = odd;
-                head = head.next;
+                odd.next = head.next;
+                head.next = odd;
                 if (pairEnd != null) {
-                    pairEnd.next = even;
+                    pairEnd.next = head;
                 }
-                pairEnd = head;
+                pairEnd = odd;
+                head = head.next;
+                
                 
             } else {
                 odd = head;
