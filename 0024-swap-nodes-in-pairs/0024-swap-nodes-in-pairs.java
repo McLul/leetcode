@@ -12,23 +12,23 @@ class Solution {
     public ListNode swapPairs(ListNode head) {
         int counter = 1;
         ListNode result = head == null || head.next == null ? head : head.next;
-        ListNode evenStack = null;
-        ListNode oddStack = null;
+        ListNode even = null;
+        ListNode odd = null;
         ListNode pairEnd = null;
         while (head != null) {
             if (counter % 2 == 0)
             {
-                evenStack = head; // evenStack becomes 
-                oddStack.next = evenStack.next;
-                evenStack.next = oddStack;
+                even = head; 
+                odd.next = even.next;
+                even.next = odd;
                 head = head.next;
                 if (pairEnd != null) {
-                    pairEnd.next = evenStack;
+                    pairEnd.next = even;
                 }
                 pairEnd = head;
                 
             } else {
-                oddStack = head;
+                odd = head;
 
             }
             counter++;
