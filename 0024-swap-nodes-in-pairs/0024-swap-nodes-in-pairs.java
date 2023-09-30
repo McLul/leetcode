@@ -31,10 +31,6 @@ class Solution {
                 oddStack = head;
 
             }
-                           
-                //System.out.println(evenStack.val);
-                //System.out.println(oddStack.val);
-         
             counter++;
             head = head.next;
             
