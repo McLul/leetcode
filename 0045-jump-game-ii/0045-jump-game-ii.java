@@ -29,8 +29,8 @@ class Solution {
     private int[] findLargestNumber(int start, int range, int[] nums) {
         int[] result = new int[2];
         int largestNumber = 0;
-        for (int i = start; i < start + range && i < nums.length; i++) {
-            if (nums[i]+i > largestNumber) {
+        for (int i = start; i < start + range; i++) {
+            if (nums[i]+i >= largestNumber) {
                 largestNumber = nums[i]+i; // +i to offset distance from original number
                 result[1] = nums[i];
                 result[0] = i;
