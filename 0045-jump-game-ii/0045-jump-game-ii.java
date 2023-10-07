@@ -12,13 +12,13 @@ class Solution {
         largestNum[0] = 0;
         largestNum[1] = nums[0];
         while (currentPosition<nums.length) {
-            jumps++;
+            jumps++; // jump first because we have not met our limit so there will always be a jump here
             //System.out.println(largestNum[0]);
             //System.out.println(largestNum[1]);
             //System.out.println(currentPosition);
-            largestNum = findLargestNumber(currentPosition+1,largestNum[1], nums); 
-            currentPosition = largestNum[0];
-            if (largestNum[1] == 0 || currentPosition + largestNum[1] >= nums.length-1 ) {
+            largestNum = findLargestNumber(currentPosition+1,largestNum[1], nums); // check numbers after current position + after range
+            currentPosition = largestNum[0]; // position is the largest num
+            if (largestNum[1] == 0 || currentPosition + largestNum[1] >= nums.length-1 ) { // end conditions
                 return jumps;
             }
            
@@ -31,7 +31,7 @@ class Solution {
         int largestNumber = 0;
         for (int i = start; i < start + range && i < nums.length; i++) {
             if (nums[i]+i > largestNumber) {
-                largestNumber = nums[i]+i;
+                largestNumber = nums[i]+i; // +i to offset distance from original number
                 result[1] = nums[i];
                 result[0] = i;
             }
