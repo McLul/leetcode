@@ -12,7 +12,7 @@ class Solution {
         largestNum[0] = 0;
         largestNum[1] = nums[0];
         while (currentPosition<nums.length) {
-            jumps++; // jump first because we have not met our limit so there will always be a jump here
+            jumps++; 
             //System.out.println(largestNum[0]);
             //System.out.println(largestNum[1]);
             //System.out.println(currentPosition);
