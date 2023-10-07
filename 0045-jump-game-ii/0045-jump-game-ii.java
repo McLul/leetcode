@@ -30,7 +30,7 @@ class Solution {
         int[] result = new int[2];
         int largestNumber = 0;
         for (int i = start; i < start + range && i < nums.length; i++) {
-            if (nums[i]+i >= largestNumber) {
+            if (nums[i]+i > largestNumber) {
                 largestNumber = nums[i]+i; // +i to offset distance from original number
                 result[1] = nums[i];
                 result[0] = i;
