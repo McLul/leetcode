@@ -13,9 +13,9 @@ class Solution {
         largestNum[1] = nums[0];
         while (currentPosition<nums.length) {
             jumps++;
-            System.out.println(largestNum[0]);
-            System.out.println(largestNum[1]);
-            System.out.println(currentPosition);
+            //System.out.println(largestNum[0]);
+            //System.out.println(largestNum[1]);
+            //System.out.println(currentPosition);
             largestNum = findLargestNumber(currentPosition+1,largestNum[1], nums); 
             currentPosition = largestNum[0];
             if (largestNum[1] == 0 || currentPosition + largestNum[1] >= nums.length-1 ) {
