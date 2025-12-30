@@ -8,7 +8,7 @@ class Solution {
         for (int i=0;i<length;i++) {
             valueMap.put(nums[i],i);
         }
-        for (int i=0;i<length;i++){
+        for (int i=length-1;i>=0;i--){
             newTarget = target - nums[i];
             Integer valueMapResult = valueMap.get(newTarget);
             if (valueMapResult != null && !valueMapResult.equals(i)) {
