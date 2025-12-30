@@ -7,7 +7,7 @@ class Solution {
         for (int i=0;i<length;i++) {
             valueMap.put(nums[i],i);
         }
-        for (int i=length-1;i>=0;i--){
+        for (int i=0;i<length;i++){
             valueMapResult = valueMap.get(target - nums[i]);
             if (valueMapResult != null && !valueMapResult.equals(i)) {
                     return new int[]{i,valueMapResult};
