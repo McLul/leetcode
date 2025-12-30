@@ -2,14 +2,13 @@ import java.util.HashMap;
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> valueMap = new HashMap<>();
-        int newTarget;
+        int length = nums.length;
         Integer valueMapResult;
-        for (int i=0;i<nums.length;i++) {
+        for (int i=0;i<length;i++) {
             valueMap.put(nums[i],i);
         }
-        for (int i=0;i<nums.length;i++){
-            newTarget = target - nums[i];
-            valueMapResult = valueMap.get(newTarget);
+        for (int i=0;i<length;i++){
+            valueMapResult = valueMap.get(target - nums[i]);
             if (valueMapResult != null && !valueMapResult.equals(i)) {
                     return new int[]{i,valueMapResult};
             }
