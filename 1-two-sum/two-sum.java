@@ -13,11 +13,9 @@ class Solution {
             newTarget = target - nums[i];
             valueMapResult = valueMap.get(newTarget);
             if (valueMapResult != null && !valueMapResult.equals(i)) {
-                    result[0] = i;
-                    result[1] = valueMapResult;
-                    return result;
+                    return new int[]{i,valueMapResult};
             }
         }
-        return result;
+        return new int[]{0,0};
     }
 }
