@@ -5,12 +5,13 @@ class Solution {
         int[] result = new int[2];
         int length = nums.length;
         int newTarget;
+        Integer valueMapResult;
         for (int i=0;i<length;i++) {
             valueMap.put(nums[i],i);
         }
         for (int i=0;i<length;i++){
             newTarget = target - nums[i];
-            Integer valueMapResult = valueMap.get(newTarget);
+            valueMapResult = valueMap.get(newTarget);
             if (valueMapResult != null && !valueMapResult.equals(i)) {
                     result[0] = i;
                     result[1] = valueMapResult;
