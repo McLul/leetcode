@@ -36,7 +36,7 @@ class Solution {
         }
         endNodel2 = tempNodeHolder;
         smallestEndNode = l1Size <= l2Size ? endNodel1 : endNodel2;
-        System.out.println(smallestEndNode.val);
+        //System.out.println(smallestEndNode.val);
         if (l1Size == l2Size) {
             largestList = l1;
             smallestList= l2;
@@ -52,7 +52,7 @@ class Solution {
             sizeDifference -=1;
         }
         tempNodeHolder = smallestList;
-        while (tempNodeHolder != null) {System.out.println(tempNodeHolder.val); tempNodeHolder = tempNodeHolder.next;}
+        //while (tempNodeHolder != null) {System.out.println(tempNodeHolder.val); tempNodeHolder = tempNodeHolder.next;}
         tempNodeHolder = resultList;
         while (smallestList != null || remainder != 0){
             if (smallestList != null) {
