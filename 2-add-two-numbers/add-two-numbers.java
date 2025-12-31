@@ -15,7 +15,6 @@ class Solution {
         int l2Size = 0;
         ListNode secondLastNode = null;
         ListNode tempNodeHolder = l1;
-        ListNode tempNodeNextHolder = null;
         ListNode resultList = new ListNode();
         ListNode largestList = null;
         ListNode smallestList = null;
