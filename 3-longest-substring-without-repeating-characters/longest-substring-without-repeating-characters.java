@@ -23,7 +23,7 @@ class Solution {
             } else {
                 i = charPos;
                 wordLength = 0;
-                wordMap = new HashMap<>();
+                wordMap.clear();
                 if (stringLength - i - resultLength < 1 ) {
                     return resultLength;
                 }
