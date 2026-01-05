@@ -3,12 +3,12 @@ import java.util.HashMap;
 class Solution {
     public int lengthOfLongestSubstring(String s) {
         // create map of word, check it everytime end point moves, keep track of length
-        HashMap<Character, Integer> wordMap = new HashMap<>();
-        Integer integerVal = 1;
         int wordLength = 0;
         int stringLength = s.length();
+        HashMap<Character, Integer> wordMap = new HashMap<>();
         int resultLength = stringLength == 1 ? 1 : 0;
         Character charTested = null;
+        Integer integerVal = null;
         
         for (int i = 0; i<stringLength;i++) {
             charTested = s.charAt(i);
@@ -21,9 +21,9 @@ class Solution {
                 i = wordMap.get(charTested);
                 wordLength = 0;
                 wordMap = new HashMap<>();
-                //if ((stringLength - i+1) / 2 <= resultLength) {
-                 //   break;
-               // }
+                if (stringLength - i - resultLength < 0 ) {
+                    return resultLength;
+                }
             }
             if (wordLength > resultLength){
                     resultLength = wordLength;
