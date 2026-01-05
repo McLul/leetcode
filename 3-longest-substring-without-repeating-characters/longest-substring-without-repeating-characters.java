@@ -24,9 +24,9 @@ class Solution {
                 i = charPos;
                 wordLength = 0;
                 wordMap = new HashMap<>();
-                if (stringLength - i - resultLength < 1 ) {
-                    return resultLength;
-                }
+                //if (stringLength - i - resultLength < 1 ) {
+                   // return resultLength;
+                //}
             }
             if (wordLength > resultLength){
                     resultLength = wordLength;
