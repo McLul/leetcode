@@ -21,7 +21,7 @@ class Solution {
                 i = wordMap.get(charTested);
                 wordLength = 0;
                 wordMap = new HashMap<>();
-                if (stringLength - i - resultLength < 0 ) {
+                if (stringLength - i - resultLength < 1 ) {
                     return resultLength;
                 }
             }
