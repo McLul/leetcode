@@ -5,15 +5,18 @@ class Solution {
         // create map of word, check it everytime end point moves, keep track of length
         int wordLength = 0;
         int stringLength = s.length();
+        
         HashMap<Character, Integer> wordMap = new HashMap<>();
         int resultLength = stringLength == 1 ? 1 : 0;
         Character charTested = null;
         Integer integerVal = null;
+        Integer charPos = null;
         
         for (int i = 0; i<stringLength;i++) {
             charTested = s.charAt(i);
             integerVal = i;
-            if (wordMap.get(charTested) == null) {
+            charPos = wordMap.get(charTested);
+            if (charPos == null) {
                 wordMap.put(charTested, integerVal);
                 wordLength += 1;
 
