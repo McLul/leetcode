@@ -6,7 +6,7 @@ class Solution {
         int wordLength = 0;
         int stringLength = s.length();
         
-        HashMap<Character, Integer> wordMap = new HashMap<>();
+        HashMap<Character, Integer> wordMap = new HashMap<Character, Integer>();
         int resultLength = stringLength == 1 ? 1 : 0;
         Character charTested = null;
         Integer integerVal = null;
