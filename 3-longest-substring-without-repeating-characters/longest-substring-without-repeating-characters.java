@@ -24,9 +24,9 @@ class Solution {
                 i = charPos;
                 wordLength = 0;
                 wordMap.clear();
-                if (stringLength - i - resultLength < 1 ) {
-                    return resultLength;
-                }
+                //if (stringLength - i - resultLength < 1 ) {
+                //    return resultLength;
+                //}
             }
             if (wordLength > resultLength){
                     resultLength = wordLength;
