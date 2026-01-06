@@ -30,12 +30,7 @@ class Solution {
                 wordLength = startingChar == charTested ? i-1-startingPos : i-startingPos;
                 wordMap.put(charTested, integerVal);
                 if (wordLength > resultLength){
-                        System.out.println(startingPos);
-                        System.out.println(startingChar);
-                        System.out.println(charPos);
-                        System.out.println(charTested);
                         resultLength = wordLength;
-                        System.out.println(resultLength + "result");
                 }
             }
         }
