@@ -14,9 +14,9 @@ class Solution {
         
         for (int i = 0; i<stringLength;i++) {
             charTested = s.charAt(i);
-            integerVal = i;
             charPos = wordMap.get(charTested);
             if (charPos == null) {
+                integerVal = i;
                 wordMap.put(charTested, integerVal);
                 wordLength += 1;
 
