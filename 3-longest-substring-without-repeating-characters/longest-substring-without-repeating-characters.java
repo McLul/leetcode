@@ -30,7 +30,7 @@ class Solution {
                  //   startingChar = charTested;
                 //}
                 startingPos = startingPos < charPos? charPos :startingPos ;
-                startingChar = startingPos < charPos ? charTested : startingChar;
+                //startingChar = startingPos < charPos ? charTested : startingChar;
                 wordLength = startingChar == charTested ? i-1-startingPos : i-startingPos;
                 wordMap.put(charTested, integerVal);
                 if (wordLength > resultLength){
