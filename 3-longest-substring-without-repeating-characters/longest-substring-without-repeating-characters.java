@@ -25,7 +25,11 @@ class Solution {
                         resultLength = wordLength;
                     }
             } else {
-                startingPos = startingPos >= charPos? startingPos : charPos;
+                if (startingPos < charPos){
+                    startingPos = charPos;
+                    //startingChar = charTested;
+                }
+                //startingPos = startingPos >= charPos? startingPos : charPos;
                 startingChar = startingPos >= charPos ? startingChar : charTested;
                 wordLength = startingChar == charTested ? i-1-startingPos : i-startingPos;
                 wordMap.put(charTested, integerVal);
