@@ -28,9 +28,9 @@ class Solution {
                 startingPos = startingPos < charPos? charPos :startingPos ;
                 wordLength = i-startingPos;
                 wordMap.put(charTested, integerVal);
-                if (wordLength > resultLength){
-                        resultLength = wordLength;
-                }
+                //if (wordLength > resultLength){
+                        //resultLength = wordLength;
+                //}
             }
         }
         if (wordLength > resultLength){
