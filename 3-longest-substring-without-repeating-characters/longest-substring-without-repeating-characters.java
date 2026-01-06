@@ -21,10 +21,10 @@ class Solution {
             if (charPos == null) {
                 wordMap.put(charTested, integerVal);
                 wordLength += 1;
-                    if (wordLength > resultLength){
-                        resultLength = wordLength;
-                    }
             } else {
+                if (wordLength > resultLength){
+                        resultLength = wordLength;
+                }
                 startingPos = startingPos < charPos? charPos :startingPos ;
                 wordLength = i-startingPos;
                 wordMap.put(charTested, integerVal);
@@ -33,6 +33,9 @@ class Solution {
                 }
             }
         }
+        if (wordLength > resultLength){
+                        resultLength = wordLength;
+                }
 
 
         return resultLength;
