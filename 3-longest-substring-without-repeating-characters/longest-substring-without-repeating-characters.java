@@ -25,12 +25,12 @@ class Solution {
                         resultLength = wordLength;
                     }
             } else {
-                if (startingPos < charPos){
-                    startingPos = charPos;
-                    //startingChar = charTested;
-                }
-                //startingPos = startingPos >= charPos? startingPos : charPos;
-                startingChar = startingPos >= charPos ? startingChar : charTested;
+                //if (startingPos < charPos){
+                 //   startingPos = charPos;
+                 //   startingChar = charTested;
+                //}
+                startingPos = startingPos < charPos? charPos :startingPos ;
+                startingChar = startingPos < charPos ? charTested : startingChar;
                 wordLength = startingChar == charTested ? i-1-startingPos : i-startingPos;
                 wordMap.put(charTested, integerVal);
                 if (wordLength > resultLength){
