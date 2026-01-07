@@ -3,7 +3,6 @@ class Solution {
         if (x < 0) {
             return false;
         }
-        boolean result = true;
         String stringNumber = String.valueOf(x);
         int stringLength = stringNumber.length();
         for (int i = 0; i< stringLength /2; i++){
@@ -11,6 +10,6 @@ class Solution {
                 return false;
             }
         }
-        return result;
+        return true;
     }
 }
