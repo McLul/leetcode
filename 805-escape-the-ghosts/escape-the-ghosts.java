@@ -27,14 +27,14 @@ class Solution {
             } else {
                 ghostCurrMovesTarget += ghosts[i][1] >= target[1] ? ghosts[i][1] - target[1] : target[1] - ghosts[i][1];
             }
-            System.out.println(ghostCurrMovesTarget);
+            //System.out.println(ghostCurrMovesTarget);
             if (ghostMinMovesTarget == null || ghostMinMovesTarget > ghostCurrMovesTarget){
                 ghostMinMovesTarget = ghostCurrMovesTarget;
             }
 
         }
-        System.out.println(playerMinMovesTarget);
-        System.out.println(ghostMinMovesTarget);
+        //System.out.println(playerMinMovesTarget);
+        //System.out.println(ghostMinMovesTarget);
         return playerMinMovesTarget < ghostMinMovesTarget ? true : false;
 
     }
