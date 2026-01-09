@@ -1,13 +1,11 @@
 class Solution {
     public boolean escapeGhosts(int[][] ghosts, int[] target) {
-        int[] playerPosition = new int[]{0,0};
-        int ghostCount = ghosts.length;
         int playerMinMovesTarget = Math.abs(target[0]) + Math.abs(target[1]);
         Integer ghostMinMovesTarget = null;
         int ghostCurrMovesTarget = 0;
         
 
-        for(int i = 0; i<ghostCount;i++) {
+        for(int i = 0; i<ghosts.length;i++) {
             ghostCurrMovesTarget = 0;
             if(ghosts[i][0] < 0 && target[0] < 0) {
                 ghostCurrMovesTarget += ghosts[i][0] >= target[0] ? -1*target[0] - -1*ghosts[i][0] :  -1*ghosts[i][0] - -1*target[0];
