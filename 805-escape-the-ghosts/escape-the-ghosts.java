@@ -28,12 +28,15 @@ class Solution {
             //System.out.println(ghostCurrMovesTarget);
             if (ghostMinMovesTarget == null || ghostMinMovesTarget > ghostCurrMovesTarget){
                 ghostMinMovesTarget = ghostCurrMovesTarget;
+                if (ghostMinMovesTarget <= playerMinMovesTarget) {
+                    return false;
+                }
             }
 
         }
         //System.out.println(playerMinMovesTarget);
         //System.out.println(ghostMinMovesTarget);
-        return playerMinMovesTarget < ghostMinMovesTarget ? true : false;
+        return true;
 
     }
 }
