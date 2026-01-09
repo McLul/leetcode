@@ -7,9 +7,10 @@ class Solution {
 
         for(int i = 0; i<ghosts.length;i++) {
             ghostCurrMovesTarget = 0;
+            //cases - both are negative, one is negative, both are positive - find difference
             if(ghosts[i][0] < 0 && target[0] < 0) {
                 ghostCurrMovesTarget += ghosts[i][0] >= target[0] ? -1*target[0] - -1*ghosts[i][0] :  -1*ghosts[i][0] - -1*target[0];
-            } else if(ghosts[i][0] < 0) {
+            } else if(ghosts[i][0] < 0)  {
                 ghostCurrMovesTarget += -1*ghosts[i][0] + target[0];
             } else if( target[0] < 0) {
                 ghostCurrMovesTarget += ghosts[i][0] + -1* target[0];
