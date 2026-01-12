@@ -23,6 +23,7 @@ class Solution {
         val = (val << 1) + root.val;
         if(root.left != null) {total += recursiveTraverseDFS(val, root.left);}
         if(root.right != null) {total += recursiveTraverseDFS(val, root.right);}
+        //once we have reached end nodes without leafs we will add them to the total.
         if(root.left == null && root.right == null) {
             return val;
         }
