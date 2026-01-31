@@ -7,7 +7,7 @@ class MyCalendar {
     }
     
     public boolean book(int startTime, int endTime) {
-        int currPos = this.calendar.size();
+        int currPos = this.calendar.size(); // if it doesnt come before another, put at end
         for (int i = 0; i <this.calendar.size(); i++) {
             Integer[] booking = this.calendar.get(i);
             // if start doesnt clear booking return false
@@ -17,7 +17,7 @@ class MyCalendar {
                 return false;
             } else if (startTime <= booking[0] && endTime >= booking[1]) {
                 return false;
-            } else if (endTime <= booking[0]) {
+            } else if (endTime <= booking[0]) { // this will ensure its sorted correctly
                 currPos = i;
             }
             
