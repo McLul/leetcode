@@ -16,7 +16,6 @@ class Solution {
                     return false;
                 }
             }
-            if (words[i].length() > words[i+1].length()) {System.out.println(words[i].substring(0,words[i+1].length()));}
             if (words[i].length() > words[i+1].length() && words[i].substring(0,words[i+1].length()).equals(words[i+1])) {
                 return false;
             }
