@@ -19,7 +19,7 @@ class Solution {
             if (!resultStack.isEmpty() && resultStack.peek().equals(charTested)) {
                 resultStack.pop();
             } else {
-                resultStack.push(s.charAt(i));
+                resultStack.push(charTested);
             }
         }
         resultIterator = resultStack.iterator();
