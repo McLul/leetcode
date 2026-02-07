@@ -1,10 +1,12 @@
 import java.util.Stack;
 import java.util.Iterator;
+
 class Solution {
     String result;
     public String removeDuplicates(String s) {
         Stack<Character> resultStack = new Stack<>();
-        Iterator resultIterator;
+        Iterator resultIterator = null;
+        StringBuilder stringResult = null;
         this.result = new String();
         Character previousChar = null;
         // edge case length 1;
@@ -19,12 +21,12 @@ class Solution {
             } else {
                 resultStack.push(s.charAt(i));
             }
-            //previousChar = stackSize > 0 ? resultStack.peek() : null;
         }
         resultIterator = resultStack.iterator();
+        stringResult = new StringBuilder(resultStack.size());
         while (resultIterator.hasNext()) {
-            result += resultIterator.next();
+            stringResult.append( resultIterator.next());
         }
-        return result;
+        return stringResult.toString();
     }
 }
