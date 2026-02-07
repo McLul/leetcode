@@ -55,13 +55,13 @@ class Solution {
         for (int i = 0 ; i < linkedResult.size()-1; i++) {
             // edge case duplicate is on first
             if (i == 0 && currNode.val == currNode.next.val){
-                System.out.println(currNode.val + ", " + currNode.next.val + i);
+                //System.out.println(currNode.val + ", " + currNode.next.val + i);
                 currNode = currNode.next.next;
                 linkedResult.head = currNode;
                 linkedResult.count -= 2;
                 i -= 1;
             } else if (currNode.val == currNode.next.val) {
-                System.out.println(currNode.val + ", " + currNode.next.val + i);
+                //System.out.println(currNode.val + ", " + currNode.next.val + i);
                 currNode = currNode.previous;
                 if (currNode.next.next.next != null) {
                     currNode.next.next.next.previous = currNode;
