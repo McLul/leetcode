@@ -11,11 +11,12 @@ class Solution {
         if (s.length() < 1) {
             return s;
         }
-        for (int i = 0 ; i < s.length(); i++) {
-            resultStack.push(s.charAt(i));
-            if (resultStack.peek().equals(previousChar)) {
+        resultStack.push(s.charAt(0));
+        for (int i = 1 ; i < s.length(); i++) {
+            if (resultStack.size() != 0 && resultStack.peek().equals(s.charAt(i))) {
                 resultStack.pop();
-                resultStack.pop();
+            } else {
+                resultStack.push(s.charAt(i));
             }
             previousChar = resultStack.size() > 0 ? resultStack.peek() : null;
         }
