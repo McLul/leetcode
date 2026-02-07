@@ -13,9 +13,8 @@ class Solution {
         }
         resultStack.push(s.charAt(0));
         for (int i = 1 ; i < s.length(); i++) {
-            int stackSize = resultStack.size();
-            Character tested = stackSize > 0 ? resultStack.peek() : null;
-            if (stackSize != 0 && tested.equals(s.charAt(i))) {
+            char charTested = s.charAt(i);
+            if (!resultStack.isEmpty() && resultStack.peek().equals(charTested)) {
                 resultStack.pop();
             } else {
                 resultStack.push(s.charAt(i));
