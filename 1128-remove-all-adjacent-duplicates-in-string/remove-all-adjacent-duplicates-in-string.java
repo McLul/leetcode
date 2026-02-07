@@ -7,10 +7,7 @@ class Solution {
         Iterator resultIterator = null;
         StringBuilder stringResult = null;
         Character charTested = null;
-        // edge case length 1;
-        if (s.length() < 1) {
-            return s;
-        }
+
         resultStack.push(s.charAt(0));
         for (int i = 1 ; i < s.length(); i++) {
             charTested = s.charAt(i);
