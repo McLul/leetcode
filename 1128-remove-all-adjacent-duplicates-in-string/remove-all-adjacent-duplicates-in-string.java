@@ -2,7 +2,6 @@ import java.util.Stack;
 import java.util.Iterator;
 
 class Solution {
-    String result;
     public String removeDuplicates(String s) {
         Stack<Character> resultStack = new Stack<>();
         Iterator resultIterator = null;
@@ -26,7 +25,6 @@ class Solution {
         while (resultIterator.hasNext()) {
             stringResult.append( resultIterator.next());
         }
-        this.result = stringResult.toString();
-        return this.result;
+        return stringResult.toString();
     }
 }
