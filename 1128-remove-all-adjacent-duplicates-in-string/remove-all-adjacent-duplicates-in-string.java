@@ -13,12 +13,14 @@ class Solution {
         }
         resultStack.push(s.charAt(0));
         for (int i = 1 ; i < s.length(); i++) {
-            if (resultStack.size() != 0 && resultStack.peek().equals(s.charAt(i))) {
+            int stackSize = resultStack.size();
+            Character tested = stackSize > 0 ? resultStack.peek() : null;
+            if (stackSize != 0 && tested.equals(s.charAt(i))) {
                 resultStack.pop();
             } else {
                 resultStack.push(s.charAt(i));
             }
-            previousChar = resultStack.size() > 0 ? resultStack.peek() : null;
+            //previousChar = stackSize > 0 ? resultStack.peek() : null;
         }
         resultIterator = resultStack.iterator();
         while (resultIterator.hasNext()) {
