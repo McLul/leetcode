@@ -7,7 +7,6 @@ class Solution {
         Stack<Character> resultStack = new Stack<>();
         Iterator resultIterator = null;
         StringBuilder stringResult = null;
-        this.result = new String();
         Character charTested = null;
         // edge case length 1;
         if (s.length() < 1) {
@@ -27,6 +26,7 @@ class Solution {
         while (resultIterator.hasNext()) {
             stringResult.append( resultIterator.next());
         }
-        return stringResult.toString();
+        this.result = stringResult.toString();
+        return this.result;
     }
 }
