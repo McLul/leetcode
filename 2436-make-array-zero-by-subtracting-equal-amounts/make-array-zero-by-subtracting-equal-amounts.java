@@ -3,17 +3,19 @@ class Solution {
     public int minimumOperations(int[] nums) {
         this.result = 0;
         Integer minNumber = null;
-        Integer largestNumber = 0;
+        Integer maxNumber = 0;
+        int checkedNumber = 0;
         // find smallest number
-        while (!largestNumber.equals(minNumber)){
+        while (!maxNumber.equals(minNumber)){
             minNumber = null;
-            largestNumber = null;
+            maxNumber = null;
             for (int i = 0; i < nums.length; i++) {
-                if ((minNumber == null || minNumber > nums[i]) && nums[i] > 0) {
-                    minNumber = nums[i];
+                checkedNumber = nums[i];
+                if ((minNumber == null || minNumber > checkedNumber) && checkedNumber > 0) {
+                    minNumber = checkedNumber;
                 }
-                if (largestNumber == null || largestNumber < nums[i]) {
-                    largestNumber = nums[i];
+                if (maxNumber == null || maxNumber < checkedNumber) {
+                    maxNumber = checkedNumber;
                 }
                 
             }
