@@ -6,7 +6,7 @@ class Solution {
         int maxNumber = 1;
         int checkedNumber = 0;
         // find smallest number
-        while (maxNumber != minNumber){
+        while (maxNumber > 0){
             minNumber = 0;
             maxNumber = 0;
             for (int i = 0; i < nums.length; i++) {
