@@ -23,7 +23,9 @@ class Solution {
                 return this.result;
             } else {
                 for (int i = 0; i < nums.length; i++) {
-                    nums[i] -= minNumber;
+                    if (nums[i] > 0) {
+                        nums[i] -= minNumber; 
+                    }
                 }
             }
             this.result += 1;
