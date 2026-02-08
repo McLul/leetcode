@@ -30,8 +30,6 @@ class Solution {
                 }
             }
             this.result += 1;
-            //if (largestNumber == 0) {return this.result;}
-            // find minimum number of factors per.
         }
         return this.result;
     }
