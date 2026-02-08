@@ -3,13 +3,7 @@ class Solution {
     public int minimumOperations(int[] nums) {
         this.result = 0;
         Integer minNumber = null;
-        Integer largestNumber = null;
-        // find largest number
-        for (int i = 0; i < nums.length; i++) {
-            if (largestNumber == null || largestNumber < nums[i]) {
-                largestNumber = nums[i];
-            }
-        }
+        Integer largestNumber = 0;
         // find smallest number
         while (!largestNumber.equals(minNumber)){
             minNumber = null;
