@@ -5,7 +5,7 @@ class Solution {
         int minNumber = 0;
         int maxNumber = 1;
         int checkedNumber = 0;
-        // find smallest number
+        // find smallest number and largest number when max number = 0, end loop
         while (maxNumber > 0){
             minNumber = 0;
             maxNumber = 0;
