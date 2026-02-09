@@ -1,15 +1,19 @@
 class Solution {
     public String removeStars(String s) {
         StringBuilder resultString = new StringBuilder();
+        int resultLength = 0;
+        char charChecked = '.';
         for (int i = 0 ; i < s.length(); i++) {
-            if (resultString.length() > 0 && s.charAt(i) == '*') {
+            resultLength = resultString.length();
+            charChecked = s.charAt(i);
+            if (resultLength > 0 && charChecked == '*') {
                 // remove added character
-                resultString.deleteCharAt(resultString.length()-1);
-            } else if (s.charAt(i) == '*') {
+                resultString.deleteCharAt(resultLength-1);
+            } else if (charChecked == '*') {
                 // do nothing
             } else {
                 // add new char
-                resultString.append(s.charAt(i));
+                resultString.append(charChecked);
             }
         }
         return resultString.toString();
