@@ -4,9 +4,9 @@ class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
         this.result = false;
         int letterCount = ransomNote.length();
-        if (magazine.length() < ransomNote.length()) {
-            return this.result;
-        }
+        //if (magazine.length() < ransomNote.length()) {
+        //    return this.result;
+       // }
         Character charTested = null;
         Integer intTested = null;
         HashMap<Character, Integer> stringMap = new HashMap<>();
