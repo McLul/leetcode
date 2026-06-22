@@ -1,4 +1,7 @@
 import java.util.HashMap;
+// O(1) space complexity due to only storing ints of digits
+// O(NxM) call complexity but as the number of comparing digits is low this overcomes hashing computational overhead
+
 
 class Solution {
     public int maxNumberOfBalloons(String text) {
