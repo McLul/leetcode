@@ -18,17 +18,17 @@ class Solution {
             listLength += 1;
             listChecker = listChecker.next;
         }
-        ListNode[] nodeArray = new ListNode[listLength];
+        int[] valArray = new int[listLength];
         listChecker = head;
-        for(int i=0; i<nodeArray.length;i++) { // first we need a count
-            nodeArray[i] = listChecker;
+        for(int i=0; i<valArray.length;i++) { // first we need a count
+            valArray[i] = listChecker.val;
             listChecker = listChecker.next;
         }
 
         // go through the array and check the front and back until the middle
-        for(int i=0; i<nodeArray.length/2;i++) {
-            if (nodeArray[i].val + nodeArray[nodeArray.length-1-i].val > result ) {
-                result = nodeArray[i].val + nodeArray[nodeArray.length-1-i].val;
+        for(int i=0; i<valArray.length/2;i++) {
+            if (valArray[i] + valArray[valArray.length-1-i] > result ) {
+                result = valArray[i] + valArray[valArray.length-1-i];
             }
         }
         return result;
