@@ -9,6 +9,7 @@
  * }
  */
 class Solution {
+
     public int pairSum(ListNode head) {
         // make copy of the list references, easiest is an array 
         int result = 0;
