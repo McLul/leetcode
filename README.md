@@ -27,4 +27,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [2130-maximum-twin-sum-of-a-linked-list](https://github.com/McLul/leetcode/tree/master/2130-maximum-twin-sum-of-a-linked-list) |
+## Array
+|  |
+| ------- |
+| [1732-find-the-highest-altitude](https://github.com/McLul/leetcode/tree/master/1732-find-the-highest-altitude) |
+## Prefix Sum
+|  |
+| ------- |
+| [1732-find-the-highest-altitude](https://github.com/McLul/leetcode/tree/master/1732-find-the-highest-altitude) |
 <!---LeetCode Topics End-->
