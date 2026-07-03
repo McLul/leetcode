@@ -10,6 +10,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## String
 |  |
 | ------- |
+| [0014-longest-common-prefix](https://github.com/McLul/leetcode/tree/master/0014-longest-common-prefix) |
 | [1189-maximum-number-of-balloons](https://github.com/McLul/leetcode/tree/master/1189-maximum-number-of-balloons) |
 ## Counting
 |  |
@@ -30,9 +31,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 |  |
 | ------- |
+| [0014-longest-common-prefix](https://github.com/McLul/leetcode/tree/master/0014-longest-common-prefix) |
 | [1732-find-the-highest-altitude](https://github.com/McLul/leetcode/tree/master/1732-find-the-highest-altitude) |
 ## Prefix Sum
 |  |
 | ------- |
 | [1732-find-the-highest-altitude](https://github.com/McLul/leetcode/tree/master/1732-find-the-highest-altitude) |
+## Trie
+|  |
+| ------- |
+| [0014-longest-common-prefix](https://github.com/McLul/leetcode/tree/master/0014-longest-common-prefix) |
 <!---LeetCode Topics End-->
