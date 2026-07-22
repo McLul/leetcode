@@ -20,15 +20,17 @@ class Solution {
         for (ArrayList<Integer> i : distanceHashMap.values()){
             if (i.size() > 2) {
                 int firstPos = 0;
-                int secondPos = 1;
-                int thirdPos = 2;
-                Integer minValue = Math.abs(i.get(firstPos) - i.get(secondPos)) + Math.abs(i.get(secondPos) - i.get(thirdPos)) + Math.abs(i.get(thirdPos) - i.get(firstPos));
+                Integer firstVal = i.get(firstPos);
+                Integer secondVal = i.get(firstPos+1);
+                Integer thirdVal = i.get(firstPos+2);
+                Integer minValue = Math.abs(firstVal - secondVal) + Math.abs(secondVal - thirdVal) + Math.abs(thirdVal - firstVal);
                 currentMin = currentMin == null || currentMin > minValue ? minValue : currentMin ;
                 for (int ii = 0; ii + 3 < i.size(); ii++) {
                     firstPos += 1;
-                    secondPos += 1;
-                    thirdPos += 1;
-                    minValue = Math.abs(i.get(firstPos) - i.get(secondPos)) + Math.abs(i.get(secondPos) - i.get(thirdPos)) + Math.abs(i.get(thirdPos) - i.get(firstPos));
+                    firstVal = i.get(firstPos);
+                    secondVal = i.get(firstPos+1);
+                    thirdVal = i.get(firstPos+2);
+                    minValue = Math.abs(firstVal - secondVal) + Math.abs(secondVal - thirdVal) + Math.abs(thirdVal - firstVal);
                     currentMin = currentMin == null || currentMin > minValue ? minValue : currentMin ;
                 }
             } 
