@@ -7,6 +7,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [1189-maximum-number-of-balloons](https://github.com/McLul/leetcode/tree/master/1189-maximum-number-of-balloons) |
+| [3740-minimum-distance-between-three-equal-elements-i](https://github.com/McLul/leetcode/tree/master/3740-minimum-distance-between-three-equal-elements-i) |
 ## String
 |  |
 | ------- |
@@ -33,6 +34,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0014-longest-common-prefix](https://github.com/McLul/leetcode/tree/master/0014-longest-common-prefix) |
 | [1732-find-the-highest-altitude](https://github.com/McLul/leetcode/tree/master/1732-find-the-highest-altitude) |
+| [3740-minimum-distance-between-three-equal-elements-i](https://github.com/McLul/leetcode/tree/master/3740-minimum-distance-between-three-equal-elements-i) |
 ## Prefix Sum
 |  |
 | ------- |
