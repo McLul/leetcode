@@ -14,12 +14,12 @@ class Solution {
                 case 'R':
                     posX++;
                     break;
-                case 'U':
-                    posY++;
-                    break;
                 case 'D':
                     posY--;
                     break; 
+                case 'U':
+                    posY++;
+                    break;
             }
         }
         return (posX == 0 && posY == 0) ? true : false;
