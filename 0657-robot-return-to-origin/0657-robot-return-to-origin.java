@@ -7,6 +7,9 @@ class Solution {
         int posX = 0;
         int posY = 0;
         for (int i = 0; i < moves.length(); i++) {
+            if (Math.abs(posX) + Math.abs(posY) > moves.length() - i) {
+                return false;
+            }
             switch (moves.charAt(i)) {
                 case 'U':
                     posY++;
