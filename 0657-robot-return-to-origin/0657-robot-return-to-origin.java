@@ -8,6 +8,9 @@ class Solution {
         int posY = 0;
         for (int i = 0; i < moves.length(); i++) {
             switch (moves.charAt(i)) {
+                case 'L':
+                    posX--;
+                    break;
                 case 'U':
                     posY++;
                     break;
@@ -16,9 +19,6 @@ class Solution {
                     break; 
                 case 'R':
                     posX++;
-                    break;
-                case 'L':
-                    posX--;
                     break;
             }
         }
