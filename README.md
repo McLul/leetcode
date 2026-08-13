@@ -37,6 +37,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0014-longest-common-prefix](https://github.com/McLul/leetcode/tree/master/0014-longest-common-prefix) |
 | [1732-find-the-highest-altitude](https://github.com/McLul/leetcode/tree/master/1732-find-the-highest-altitude) |
 | [1752-check-if-array-is-sorted-and-rotated](https://github.com/McLul/leetcode/tree/master/1752-check-if-array-is-sorted-and-rotated) |
+| [2946-matrix-similarity-after-cyclic-shifts](https://github.com/McLul/leetcode/tree/master/2946-matrix-similarity-after-cyclic-shifts) |
 | [3643-flip-square-submatrix-vertically](https://github.com/McLul/leetcode/tree/master/3643-flip-square-submatrix-vertically) |
 | [3740-minimum-distance-between-three-equal-elements-i](https://github.com/McLul/leetcode/tree/master/3740-minimum-distance-between-three-equal-elements-i) |
 ## Prefix Sum
@@ -55,8 +56,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0657-robot-return-to-origin](https://github.com/McLul/leetcode/tree/master/0657-robot-return-to-origin) |
+| [2946-matrix-similarity-after-cyclic-shifts](https://github.com/McLul/leetcode/tree/master/2946-matrix-similarity-after-cyclic-shifts) |
 ## Matrix
 |  |
 | ------- |
+| [2946-matrix-similarity-after-cyclic-shifts](https://github.com/McLul/leetcode/tree/master/2946-matrix-similarity-after-cyclic-shifts) |
 | [3643-flip-square-submatrix-vertically](https://github.com/McLul/leetcode/tree/master/3643-flip-square-submatrix-vertically) |
+## Math
+|  |
+| ------- |
+| [2946-matrix-similarity-after-cyclic-shifts](https://github.com/McLul/leetcode/tree/master/2946-matrix-similarity-after-cyclic-shifts) |
 <!---LeetCode Topics End-->
